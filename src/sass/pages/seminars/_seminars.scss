@@ -1,0 +1,214 @@
+.seminars {
+  padding: 175px 0 80px;
+  @include desktop {
+    padding: 391px 0 150px;
+  }
+}
+
+.seminars-list {
+  @media screen and (max-width: 767.98px) {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.seminars-item {
+  @media screen and (max-width: 767.98px) {
+    max-width: 332px;
+  }
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include tablet {
+    display: flex;
+    margin-bottom: 80px;
+    &:nth-child(2n + 1) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.seminars-card {
+  background-color: #f9fafb;
+  padding: 20px 16px 36px 27px;
+  @include tablet {
+    padding: 30px 56px 30px 30px;
+  }
+  @include desktop-small {
+    padding: 38px 40px 38px 46px;
+  }
+  @include desktop {
+    padding: 46px 172px 49px 70px;
+    flex-grow: 1;
+  }
+}
+
+.seminars-top-text {
+  @include font(null, 14px, 1.2);
+  text-transform: uppercase;
+  color: var(--accent-text);
+
+  margin-bottom: 15px;
+
+  @include desktop {
+    @include font(null, 22px, 1.2);
+    margin-bottom: 15px;
+    padding-left: 10px;
+  }
+}
+.seminars-top-title {
+  font-family: 'Cormorant';
+  @include font(null, 18px, calc(22px / 18px));
+  text-transform: uppercase;
+
+  color: var(--text);
+  max-width: 300px;
+
+  margin-bottom: 15px;
+  @include desktop-small {
+    font-size: 23px;
+
+    max-width: 485px;
+    margin-bottom: 42px;
+  }
+  @include desktop {
+    @include font(null, 30px, calc(36px / 30px));
+    padding-left: 10px;
+  }
+}
+.seminars-text {
+  display: flex;
+  align-items: start;
+  margin-bottom: 2px;
+
+  @include font(null, 16px, calc(20px / 16px));
+
+  color: var(--accent-text);
+
+  @include tablet {
+    @include font(null, 14px, calc(20px / 14px));
+    width: 308px;
+  }
+  @include desktop-small {
+    @include font(null, 16px, calc(20px / 16px));
+    width: 485px;
+    margin-bottom: 25px;
+  }
+
+  @include desktop {
+    @include font(null, 22px, calc(38px / 22px));
+    padding-left: 10px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-icon);
+
+    margin-top: 10px;
+    margin-right: 7px;
+
+    flex-shrink: 0;
+
+    @include desktop-small {
+      background-color: var(--accent-text);
+    }
+    @include desktop {
+      width: 48px;
+      margin-top: 18px;
+      margin-right: 16px;
+    }
+  }
+}
+
+.seminars-price-list {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+
+  margin-left: auto;
+  margin-right: 18px;
+  margin-bottom: 15px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    align-items: center;
+    margin-right: 0;
+  }
+}
+
+.seminars-price-text {
+  @include font(700, 18px, calc(22px / 18px));
+  color: var(--accent-text);
+  margin-right: 5px;
+
+  @include tablet {
+    @include font(null, 16px, calc(20px / 16px));
+  }
+
+  @include desktop-small {
+    @include font(null, 18px, calc(22px / 18px));
+  }
+
+  @include desktop {
+    @include font(null, 20px, calc(24px / 20px));
+    margin-right: 10px;
+  }
+}
+
+.seminars-price-count {
+  font-family: 'Arsenal';
+  @include font(700, 30px, calc(38px / 30px));
+  color: var(--accent-text);
+
+  @include tablet {
+    @include font(null, 28px, calc(36px / 28px));
+  }
+
+  @include desktop-small {
+    @include font(null, 30px, calc(38px / 30px));
+  }
+
+  @include desktop {
+    @include font(null, 60px, calc(75px / 60px));
+  }
+}
+.seminars-button {
+  height: 84px;
+  padding: 0 74px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include font(700, 16px, calc(55px / 16px));
+  text-transform: uppercase;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: var(--accent-background);
+
+  border-radius: 150px;
+  box-shadow: 3px 3px 5px rgba(106, 55, 44, 0.16);
+  transition: background-color var(--main-transition);
+  &:hover,
+  &:focus {
+    background-color: var(--button-bgcolor-accent-hover);
+  }
+  @include tablet {
+    padding: 0 55px;
+    height: inherit;
+    margin: 0;
+  }
+  @include desktop {
+    @include font(null, 30px, calc(55px / 30px));
+    margin: 0;
+    height: 98px;
+    padding: 0px 85px;
+  }
+}
